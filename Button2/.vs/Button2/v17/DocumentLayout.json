@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Git\\CSharp\\Button2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5CCBC50C-9B1A-4495-BEEA-5E5484E929E0}|Button2\\Button2.csproj|c:\\git\\csharp\\button2\\button2\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5CCBC50C-9B1A-4495-BEEA-5E5484E929E0}|Button2\\Button2.csproj|solutionrelative:button2\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5CCBC50C-9B1A-4495-BEEA-5E5484E929E0}|Button2\\Button2.csproj|c:\\git\\csharp\\button2\\button2\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{5CCBC50C-9B1A-4495-BEEA-5E5484E929E0}|Button2\\Button2.csproj|solutionrelative:button2\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5CCBC50C-9B1A-4495-BEEA-5E5484E929E0}|Button2\\Button2.csproj|c:\\git\\csharp\\button2\\button2\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5CCBC50C-9B1A-4495-BEEA-5E5484E929E0}|Button2\\Button2.csproj|solutionrelative:button2\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,24 +26,25 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Git\\CSharp\\Button2\\Button2\\MainWindow.xaml",
               "RelativeDocumentMoniker": "Button2\\MainWindow.xaml",
               "ToolTip": "C:\\Git\\CSharp\\Button2\\Button2\\MainWindow.xaml",
               "RelativeToolTip": "Button2\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-08-08T23:35:05.567Z"
+              "WhenOpened": "2024-08-08T23:35:05.567Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Git\\CSharp\\Button2\\Button2\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "Button2\\MainWindow.xaml.cs",
               "ToolTip": "C:\\Git\\CSharp\\Button2\\Button2\\MainWindow.xaml.cs",
               "RelativeToolTip": "Button2\\MainWindow.xaml.cs",
-              "ViewState": "AQIAABoAAAAAAAAAAAAywBwAAAAJAAAA",
+              "ViewState": "AQIAACgAAAAAAAAAAAAowC0AAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-08T23:34:46.946Z",
               "EditorCaption": ""

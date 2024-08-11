@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Security.RightsManagement;
 
 namespace Button2
 {
@@ -18,6 +19,20 @@ namespace Button2
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        public struct ErrorMsg
+        {
+            public ErrorMsg()
+            {
+                byte header1 = 0xFD;
+                byte header2 = 0x07;
+                byte FCC_type;
+                byte FCC_error;
+                short checksum;
+            }
+            // define structure of message
+        }
+
         public MainWindow()
         {
             InitializeComponent();
@@ -25,9 +40,24 @@ namespace Button2
             var btn1 = new Button { Content = "Send_Fault" };
         }
 
+        String GetFCCValue()
+        {
+            return FCC.Text;
+        }
+
+        String GetErrorType()
+        {
+            return FCC.Text;
+        }
+
 
         void OnClick(object sender, RoutedEventArgs e)
         {
+            ErrorMsg error;
+
+            // get value from combo box fcc type
+            String s = GetFCCValue();
+
             if (FCC_Label.Foreground == Brushes.Yellow)
             {
                 FCC_Label.Foreground = Brushes.Green;
@@ -41,28 +71,27 @@ namespace Button2
                 FCC_Label.Foreground = Brushes.Yellow;
             }
 
-            Socket sock = new Socket(AddressFamily.InterNetwork, SocketType.Dgram,
-ProtocolType.Udp);
+            //Socket sock = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
 
-            IPAddress serverAddr = IPAddress.Parse("192.168.2.255");
+            //IPAddress serverAddr = IPAddress.Parse("192.168.2.255");
 
-            IPEndPoint endPoint = new IPEndPoint(serverAddr, 11000);
+            //IPEndPoint endPoint = new IPEndPoint(serverAddr, 11000);
 
-            string text = "Hello";
-            byte[] send_buffer = Encoding.ASCII.GetBytes(text);
+            //string text = "Hello";
+            //byte[] send_buffer = Encoding.ASCII.GetBytes(text);
 
-            sock.SendTo(send_buffer, endPoint);
+            //sock.SendTo(send_buffer, endPoint);
         }
 
-        public void SendMessage(string message)
+        public void SendMessage(byte[] msg)
         {
-            var data = Encoding.Default.GetBytes(message);
+            //var data = Encoding.Default.GetBytes(message);
             using (var udpClient = new UdpClient(AddressFamily.InterNetwork))
             {
                 var address = IPAddress.Parse("224.100.0.1");
                 var ipEndPoint = new IPEndPoint(address, 8088);
                 udpClient.JoinMulticastGroup(address);
-                udpClient.Send(data, data.Length, ipEndPoint);
+                udpClient.Send(msg, msg.Length, ipEndPoint);
                 udpClient.Close();
             }
         }
